@@ -1,4 +1,4 @@
-Research Note 
+Texture Compression Research Notes 
 Author : Hyeon-ki Lee
 
 INTRODUCTION 
