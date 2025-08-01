@@ -18,4 +18,127 @@
   date-modified = {2025-08-01 16:44:48 +0900},
 }
 
+@InProceedings{AEPW25,
+  author    = {Akenine{-}M{\"{o}}ller, Tomas and Ebelin, Pontus and Pharr, Matt and Wronski, Bartlomiej},
+  booktitle = {ACM/EG Symposium on High Performance Graphics (HPG)},
+  title     = {Collaborative Texture Filtering},
+  year      = {2025},
+  month     = {July},
+}
+
+@InProceedings{WPA25,
+  author    = {Wronski, Bartlomiej and Pharr, Matt and Akenine{-}M{\"{o}}ller, Tomas},
+  booktitle = {ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D)},
+  title     = {Improved Stochastic Texture Filtering Through Sample Reuse},
+  year      = {2025},
+  month     = {May},
+  eprint    = {2504.05562},
+}
+
+@InProceedings{PWSF24,
+  author    = {Pharr, Matt and Wronski, Bartlomiej and Salvi, Marco and Fajardo, Marcos},
+  booktitle = {ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D)},
+  title     = {Filtering After Shading with Stochastic Texture Filtering},
+  year      = {2024},
+  month     = {May},
+}
+
+@Article{Wro25,
+  author    = {Bartlomiej Wronski},
+  title     = {GPU Friendly Laplacian Texture Blending},
+  year      = {2025},
+  month     = {March},
+  number    = {1},
+  pages     = {21--39},
+  volume    = {14},
+  booktitle = {Journal of Computer Graphics Techniques},
+  url       = {https://jcgt.org/published/0014/01/02/},
+}
+
+@Article{Hedstrom2025,
+  author    = {Hedstrom, Trevor and Kettunen, Markus and Lin, Daqi and Wyman, Chris and Li, Tzu-Mao},
+  journal   = {ACM Trans. Graph.},
+  title     = {ReSTIR BDPT: Bidirectional ReSTIR Path Tracing with Caustics},
+  year      = {2025},
+  issn      = {0730-0301},
+  month     = jun,
+  note      = {Just Accepted},
+  abstract  = {Recent spatiotemporal resampling algorithms (ReSTIR) accelerate real-time path tracing by reusing samples between pixels and frames. However, existing methods are limited by the sampling quality of path tracing, making them inefficient for scenes with caustics and hard-to-reach lights. We develop a ReSTIR variant incorporating bidirectional path tracing that significantly improves the sampling quality in these scenes. Combining bidirectional path tracing and ReSTIR introduces multiple challenges: the generalized resampled importance sampling (GRIS) behind ReSTIR is, by default, not aware of how a path was sampled, which complicates reuse of bidirectional paths. Light tracing is also challenging since light subpaths can contribute to all pixels. To address these challenges, we apply GRIS in a sampling technique-aware extended path space, design a bidirectional hybrid shift mapping, and introduce caustics reservoirs that can accumulate caustics across frames. Our method takes around 50ms per frame across our test scenes, and achieves significantly lower error compared to prior unidirectional ReSTIR variants running in equal time.},
+  address   = {New York, NY, USA},
+  doi       = {10.1145/3744898},
+  groups    = {SIGGRAPH 2025},
+  publisher = {Association for Computing Machinery},
+  url       = {https://doi.org/10.1145/3744898},
+}
+
+@Article{Lin2022,
+  author     = {Lin, Daqi and Kettunen, Markus and Bitterli, Benedikt and Pantaleoni, Jacopo and Yuksel, Cem and Wyman, Chris},
+  journal    = {ACM Trans. Graph.},
+  title      = {Generalized resampled importance sampling: foundations of ReSTIR},
+  year       = {2022},
+  issn       = {0730-0301},
+  month      = jul,
+  number     = {4},
+  volume     = {41},
+  abstract   = {As scenes become ever more complex and real-time applications embrace ray tracing, path sampling algorithms that maximize quality at low sample counts become vital. Recent resampling algorithms building on Talbot et al.'s [2005] resampled importance sampling (RIS) reuse paths spatiotemporally to render surprisingly complex light transport with a few samples per pixel. These reservoir-based spatiotemporal importance resamplers (ReSTIR) and their underlying RIS theory make various assumptions, including sample independence. But sample reuse introduces correlation, so ReSTIR-style iterative reuse loses most convergence guarantees that RIS theoretically provides.We introduce generalized resampled importance sampling (GRIS) to extend the theory, allowing RIS on correlated samples, with unknown PDFs and taken from varied domains. This solidifies the theoretical foundation, allowing us to derive variance bounds and convergence conditions in ReSTIR-based samplers. It also guides practical algorithm design and enables advanced path reuse between pixels via complex shift mappings.We show a path-traced resampler (ReSTIR PT) running interactively on complex scenes, capturing many-bounce diffuse and specular lighting while shading just one path per pixel. With our new theoretical foundation, we can also modify the algorithm to guarantee convergence for offline renderers.},
+  address    = {New York, NY, USA},
+  articleno  = {75},
+  doi        = {10.1145/3528223.3530158},
+  groups     = {SIGGPRAH 2022},
+  issue_date = {July 2022},
+  keywords   = {MIS, ReSTIR, global illumination, path tracing, real-time rendering, resampled importance sampling},
+  numpages   = {23},
+  publisher  = {Association for Computing Machinery},
+  url        = {https://doi.org/10.1145/3528223.3530158},
+}
+
+@Article{Rath2022,
+  author     = {Rath, Alexander and Grittmann, Pascal and Herholz, Sebastian and Weier, Philippe and Slusallek, Philipp},
+  journal    = {ACM Trans. Graph.},
+  title      = {EARS: efficiency-aware russian roulette and splitting},
+  year       = {2022},
+  issn       = {0730-0301},
+  month      = jul,
+  number     = {4},
+  volume     = {41},
+  abstract   = {Russian roulette and splitting are widely used techniques to increase the efficiency of Monte Carlo estimators. But, despite their popularity, there is little work on how to best apply them. Most existing approaches rely on simple heuristics based on, e.g., surface albedo and roughness. Their efficiency often hinges on user-controlled parameters. We instead iteratively learn optimal Russian roulette and splitting factors during rendering, using a simple and lightweight data structure. Given perfect estimates of variance and cost, our fixed-point iteration provably converges to the optimal Russian roulette and splitting factors that maximize the rendering efficiency. In our application to unidirectional path tracing, we achieve consistent and significant speed-ups over the state of the art.},
+  address    = {New York, NY, USA},
+  articleno  = {81},
+  doi        = {10.1145/3528223.3530168},
+  groups     = {SIGGPRAH 2022},
+  issue_date = {July 2022},
+  keywords   = {global illumination, importance sampling, path guiding},
+  numpages   = {14},
+  publisher  = {Association for Computing Machinery},
+  url        = {https://doi.org/10.1145/3528223.3530168},
+}
+
+@InProceedings{Veach1997,
+  author    = {Veach, Eric and Guibas, Leonidas J.},
+  booktitle = {Proceedings of the 24th Annual Conference on Computer Graphics and Interactive Techniques},
+  title     = {Metropolis light transport},
+  year      = {1997},
+  address   = {USA},
+  pages     = {65–76},
+  publisher = {ACM Press/Addison-Wesley Publishing Co.},
+  series    = {SIGGRAPH '97},
+  abstract  = {We present a new Monte Carlo method for solving the light transport problem, inspired by the Metropolis sampling method in computational physics. To render an image, we generate a sequence of light transport paths by randomly mutating a single current path (e.g. adding a new vertex to the path). Each mutation is accepted or rejected with a carefully chosen probability, to ensure that paths are sampled according to the contribution they make to the ideal image. We then estimate this image by sampling many paths, and recording their locations on the image plane.Our algorithm is unbiased, handles general geometric and scattering models, uses little storage, and can be orders of magnitude more efficient than previous unbiased approaches. It performs especially well on problems that are usually considered difficult, e.g. those involving bright indirect light, small geometric holes, or glossy surfaces. Furthermore, it is competitive with previous unbiased algorithms even for relatively simple scenes.The key advantage of the Metropolis approach is that the path space is explored locally, by favoring mutations that make small changes to the current path. This has several consequences. First, the average cost per sample is small (typically only one or two rays). Second, once an important path is found, the nearby paths are explored as well, thus amortizing the expense of finding such paths over many samples. Third, the mutation set is easily extended. By constructing mutations that preserve certain properties of the path (e.g. which light source is used) while changing others, we can exploit various kinds of coherence in the scene. It is often possible to handle difficult lighting problems efficiently by designing a specialized mutation in this way.},
+  doi       = {10.1145/258734.258775},
+  groups    = {SIGGRAPH 1997},
+  isbn      = {0897918967},
+  keywords  = {variance reduction, radiative heat transfer, physically-based rendering, lighting simulation, global illumination, Monte Carlo integration, Metropolis-Hastings algorithm, Markov Chain Monte Carlo methods},
+  numpages  = {12},
+  url       = {https://doi.org/10.1145/258734.258775},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: grouping:
+0 AllEntriesGroup:;
+1 StaticGroup:SIGGRAPH\;2\;1\;\;\;SIGGRAPH\;;
+2 StaticGroup:SIGGRAPH 2025\;2\;1\;\;\;\;;
+2 StaticGroup:SIGGPRAH 2022\;2\;1\;\;\;\;;
+2 StaticGroup:SIGGRAPH 1997\;2\;1\;\;\;\;;
+1 StaticGroup:SIGGRAPH Aisa\;2\;1\;\;\;\;;
+1 StaticGroup:HPG\;2\;1\;\;\;\;;
+}
